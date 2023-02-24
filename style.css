@@ -114,11 +114,11 @@ body {
 
 .rating-nums button {
     background-color: var(--cont-bg-clr);
+    color: var(--par-clr);
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    color: var(--par-clr);
     border-radius: 2rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -255,5 +255,5 @@ body {
 
 .container,
 .container * {
-    transition: ease all .5s;
+    transition: ease all .3s;
 }

@@ -35,7 +35,7 @@ Users should be able to:
 - HTML solution URL: [HTML](https://github.com/JustANipple/interactive-rating-component/blob/master/index.html)
 - CSS solution URL: [CSS](https://github.com/JustANipple/interactive-rating-component/blob/master/style.css)
 - JS solution URL: [JS](https://github.com/JustANipple/interactive-rating-component/blob/master/script.js)
-- Live Site URL: [LIVE]](https://justanipple.github.io/interactive-rating-component/)
+- Live Site URL: [LIVE](https://justanipple.github.io/interactive-rating-component/)
 
 ## My process
 
@@ -121,4 +121,4 @@ The use of event listeners is improvable, so i will to work on that
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/JustANipple)
+- Frontend Mentor - [@JustANipple](https://www.frontendmentor.io/profile/JustANipple)

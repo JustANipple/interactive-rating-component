@@ -51,14 +51,6 @@ body {
     align-items: center;
 }
 
-/* Hiding part */
-.rating {
-      
-}       
-.thank {
-    display: none !important;
-}
-
 /* ====== Main ====== */
 .container {
     background: linear-gradient(
@@ -136,6 +128,7 @@ body {
     letter-spacing: 0.1rem;
     font-weight: var(--fw-bold);
     border-radius: 2rem;
+    pointer-events: none;
 }
 
 /* ====== Thank ====== */
@@ -242,17 +235,15 @@ body {
     }
 }
 
+/* Hiding part */
+.rating {
+      
+}       
+.thank {
+    display: none;
+}
+
 /* ====== Active states ====== */
-.rating-nums button:hover {
-    background-color: var(--btn-clr);
-    color: var(--h-clr);
-}
-
-.submit-btn:active {
-    background-color: var(--h-clr);
-    color: var(--btn-clr);
-}
-
 .container,
 .container * {
     transition: ease all .3s;

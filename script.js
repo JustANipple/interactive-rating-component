@@ -1,7 +1,6 @@
 // Saving array of buttons
 const buttons = document.querySelectorAll(".rating-nums button");
 const btnArray = Array.from(buttons);
-const root = document.documentElement;
 
 // Saving every custom color for the numbers
 const rootStyles = window.getComputedStyle(document.documentElement);
@@ -19,7 +18,7 @@ const thank = document.querySelector(".thank");
 const selected = document.querySelector(".selected");
 
 
-// Code
+// Script
 let isClicked = false;
 let num;
 for(const btn of btnArray) {

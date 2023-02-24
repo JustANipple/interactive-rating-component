@@ -16,8 +16,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -31,20 +29,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- HTML solution URL: [HTML](https://github.com/JustANipple/interactive-rating-component/blob/master/index.html)
+- CSS solution URL: [CSS](https://github.com/JustANipple/interactive-rating-component/blob/master/style.css)
+- JS solution URL: [JS](https://github.com/JustANipple/interactive-rating-component/blob/master/script.js)
+- Live Site URL: [LIVE]](https://justanipple.github.io/interactive-rating-component/)
 
 ## My process
 
@@ -55,29 +47,34 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Josh's Custom CSS Reset
+- JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I was trying to make the challenge as maintainable as possible, so i had to find a way to store custom properties into my script.js. I discovered that i can save the root element to retrieve the property values
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const rootStyles = window.getComputedStyle(document.documentElement);
+const whiteClr = rootStyles.getPropertyValue("--h-clr");
+const numBgClr = rootStyles.getPropertyValue("--par-clr");
+const orangeClr = rootStyles.getPropertyValue("--btn-clr");
+const blueClr = rootStyles.getPropertyValue("--cont-bg-clr");
+```
+
+With queryselectorall, i managed to save all the buttons in one line and then i transferred them into an array to loop through them
+
+```js
+const buttons = document.querySelectorAll(".rating-nums button");
+const btnArray = Array.from(buttons);
+```
+
+The transition from mobile view to desktop view wasn't that smooth and didn't look so responsive, so i found a way to transition all the elements selecting the outer container and applying a transition to it
+
+```css
+.container,
+.container * {
+    transition: ease all .3s;
 }
 ```
 

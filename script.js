@@ -18,6 +18,8 @@ const rating = document.querySelector(".rating");
 const thank = document.querySelector(".thank");
 const selected = document.querySelector(".selected");
 
+
+// Code
 let isClicked = false;
 let num = 0;
 for(const btn of btnArray) {
@@ -71,9 +73,3 @@ function isOut() {
         this.style.color = numBgClr;
     }
 }
-
-
-
-
-
-

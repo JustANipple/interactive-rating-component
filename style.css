@@ -29,6 +29,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* ====== Custom properties ====== */
 :root {
     /* Colors */
+    --inactive-btn: hsl(25, 87%, 34%);
     --btn-clr: hsl(25, 97%, 53%);
     --h-clr: hsl(0, 0%, 100%);
     --par-clr: hsl(217, 12%, 63%);
@@ -119,10 +120,10 @@ body {
 
 .submit-btn {
     text-align: center;
-    background-color: var(--btn-clr);
+    background-color: var(--inactive-btn);
+    color: var(--h-clr);
     padding-block: 0.75rem;
     text-decoration: none;
-    color: var(--h-clr);
     text-transform: uppercase;
     font-size: 0.825rem;
     letter-spacing: 0.1rem;

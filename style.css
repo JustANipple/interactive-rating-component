@@ -1,0 +1,151 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* ====== Custom properties ====== */
+:root {
+    /* Colors */
+    --btn-clr: hsl(25, 97%, 53%);
+    --h-clr: hsl(0, 0%, 100%);
+    --par-clr: hsl(217, 12%, 63%);
+    --num-clr: hsl(210, 18%, 20%);
+    --cont-bg-clr: hsl(213, 19%, 18%);
+    --bg-clr: hsl(216, 12%, 8%);
+    /* Font */
+    --fs-par: 0.938rem;
+    --ff: 'Overpass', sans-serif;
+    --fw-reg: 400;
+    --fw-bold: 700;
+}
+
+/* ====== Style ====== */
+body {
+    background-color: var(--bg-clr);
+    font-family: var(--ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hiding parts */
+.rating {
+    display: none !important;
+}
+.thank {
+}
+
+/* ====== Main ====== */
+.container {
+    background: linear-gradient(
+        0deg, hsl(222, 26%, 13%) 0%,
+        hsl(215, 20%, 16%) 100%);
+        margin: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+/* ====== Rating ====== */
+.rating {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.star-box {
+    padding: 0.75rem;
+    background-color: var(--cont-bg-clr);
+    width: max-content;
+    border-radius: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.star-icon {
+    width: 0.825rem;
+}
+
+.rating-title {
+    color: var(--h-clr);
+    font-size: 1.5rem;
+}
+
+.rating-desc {
+    font-size: 0.875rem;
+    color: var(--par-clr);
+}
+
+.rating-nums {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1rem;
+}
+
+.rating-nums button {
+    background-color: var(--cont-bg-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: var(--par-clr);
+    border-radius: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-top: 0.2rem;
+}
+
+.submit-btn {
+    text-align: center;
+    background-color: var(--btn-clr);
+    padding-block: 0.75rem;
+    text-decoration: none;
+    color: var(--h-clr);
+    text-transform: uppercase;
+    font-size: 0.825rem;
+    letter-spacing: 0.1rem;
+    font-weight: var(--fw-bold);
+    border-radius: 2rem;
+}
+
+/* ====== Active states ====== */
+.rating-nums button:hover {
+    background-color: var(--btn-clr);
+    color: var(--h-clr);
+}
+
+.submit-btn:active {
+    background-color: var(--h-clr);
+    color: var(--btn-clr);
+}
+
+
+/* ====== Thank ====== */
+.thank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

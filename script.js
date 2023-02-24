@@ -21,7 +21,7 @@ const selected = document.querySelector(".selected");
 
 // Code
 let isClicked = false;
-let num = 0;
+let num;
 for(const btn of btnArray) {
     btn.addEventListener("click", clicked);
     btn.addEventListener("mouseover", isHover);
@@ -55,6 +55,7 @@ function clicked() {
     this.style.color = whiteClr;
     num = this.textContent;
     submit.style.pointerEvents = "unset";
+    submit.style.backgroundColor = orangeClr;
 }
 
 function isHover() {

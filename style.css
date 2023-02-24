@@ -120,7 +120,7 @@ body {
 
 .submit-btn {
     text-align: center;
-    background-color: var(--inactive-btn);
+    background-color: var(--btn-clr);
     color: var(--h-clr);
     padding-block: 0.75rem;
     text-decoration: none;
